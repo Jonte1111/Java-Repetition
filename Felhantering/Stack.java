@@ -9,8 +9,10 @@ public class Stack {
         tmp.setNext(top);
         top = tmp;
     }
-    public int pop() {
+    public int pop() throws StackException{
         int ret;
+        if(isEmpty()) 
+            throw new StackException("Stacken var tom");
         ret = top.getData();
         top = top.getNext();
         return ret;

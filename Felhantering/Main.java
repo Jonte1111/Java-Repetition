@@ -9,7 +9,16 @@ public class Main {
        s.push(4);
        s.push(3);
        s.push(2);
-       s.pop();
+       try {
+        s.pop();
+        s.pop();
+        s.pop();
+        s.pop();
+        s.pop();
+        s.pop();
+       }catch(StackException se) {
+           System.out.println(se.getMessage());
+       }
        s.print();
     }
 }
